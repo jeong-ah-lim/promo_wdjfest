@@ -1,24 +1,22 @@
 (function(){
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
+    //start - swiper
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    const swiper2 = new Swiper(".mySwiper2", {
+        effect: 'fade',
+        spaceBetween: 10,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
+        thumbs: {
+            swiper: swiper,
         },
-    }); 
+    });
+    //end - swiper
 
     //start - 해시태그 복사하기 
     const btnClip = document.querySelector('.btnClip');
