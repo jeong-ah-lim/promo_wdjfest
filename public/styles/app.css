@@ -35,39 +35,33 @@ caption, legend { visibility: hidden; overflow: hidden; font-size: 0; line-heigh
 
 body { -webkit-user-drag: auto; }
 
-.promoWrap.pc { max-width: 1920px; min-width: 1920px; width: 100%; margin: 0 auto; }
+.promoWrap.pc { max-width: 1920px; margin: 0 auto; }
 
 .promoWrap.pc section { position: relative; }
 
-.promoWrap.pc section.keyVisual { width: 100%; height: 1279px; background: url(../images/pc_keyVisual.jpg) no-repeat 0 0; background-size: 100% 1279px; }
+.promoWrap.pc section.keyVisual .btnMore { position: absolute; right: 7.5%; bottom: 33.62%; width: 12.18%; height: 7%; font-size: 0; line-height: 0; outline: 1px solid red; }
 
-.promoWrap.pc section.keyVisual .btnMore { position: absolute; right: 144px; bottom: 430px; width: 234px; height: 90px; font-size: 0; line-height: 0; }
+.promoWrap.pc section.contVideo { background-color: #fff; }
 
-.promoWrap.pc section.contVideo { width: 100%; height: 1577px; background: url(../images/pc_contents_1.jpg) no-repeat 100% 100%; background-size: 100% 1577px; }
-
-.promoWrap.pc section.contVideo .swiperArea { width: 1435px; margin: 0 auto; padding-top: 417px; }
+.promoWrap.pc section.contVideo .swiperArea { width: 100%; margin: 0 auto; position: relative; }
 
 .promoWrap.pc section.contVideo .swiper { width: 100%; height: 100%; }
 
-.promoWrap.pc section.contVideo .swiper-slide { text-align: center; font-size: 18px; background: #fff; display: flex; justify-content: center; align-items: center; }
+.promoWrap.pc section.contVideo .swiper .swiper-slide { text-align: center; font-size: 18px; background: #fff; display: flex; justify-content: center; align-items: center; background-size: cover; background-position: center; }
 
-.promoWrap.pc section.contVideo .swiper-slide img { display: block; width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; }
+.promoWrap.pc section.contVideo .swiper .swiper-slide img { display: block; width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; }
 
-.promoWrap.pc section.contVideo .swiper { width: 100%; height: 300px; margin-left: auto; margin-right: auto; }
-
-.promoWrap.pc section.contVideo .swiper-slide { background-size: cover; background-position: center; }
-
-.promoWrap.pc section.contVideo .mySwiper2 { height: 805px; width: 100%; }
+.promoWrap.pc section.contVideo .mySwiper2 { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 75.16%; }
 
 .promoWrap.pc section.contVideo .mySwiper2 .swiper-wrapper .swiper-slide { position: relative; width: 100%; height: 0; padding-bottom: 56.25%; }
 
 .promoWrap.pc section.contVideo .mySwiper2 .swiper-wrapper .swiper-slide iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
 
-.promoWrap.pc section.contVideo .thumbsSwiper { height: 20%; box-sizing: border-box; padding: 32px 0; margin-left: 6px; }
+.promoWrap.pc section.contVideo .thumbsSwiper { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); height: 13.36%; box-sizing: border-box; margin-left: -12.4%; }
 
 .promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper { justify-content: flex-end; }
 
-.promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide { width: 230px !important; height: 130px; opacity: 0.7; margin-left: 20px; border: 3px solid #c6c7e4; position: relative; }
+.promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide { width: 11.97% !important; height: 100%; opacity: 0.7; margin-left: 1%; border: 3px solid #c6c7e4; position: relative; }
 
 .promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide::before { position: absolute; top: 50%; left: 50%; z-index: 999; transform: translate(-50%, -50%); background: url(../images/icon_thumbs_play.png) no-repeat 0 0; background-size: 36px 40px; width: 36px; height: 40px; display: block; content: ''; }
 
@@ -81,17 +75,11 @@ body { -webkit-user-drag: auto; }
 
 .promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide img { display: block; width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; }
 
-.promoWrap.pc section.contBenefit { width: 100%; height: 1416px; background: url(../images/pc_contents_2.jpg) no-repeat 100% 100%; background-size: 100% 1416px; }
+.promoWrap.pc section.contTicket .clipArea .btnClip { position: absolute; right: 12.5%; bottom: 42.43%; display: block; width: 19.47%; height: 6.14%; font-size: 0; line-height: 0; outline: 1px solid red; }
 
-.promoWrap.pc section.contTicket { width: 100%; height: 1546px; background: url(../images/pc_contents_3.jpg) no-repeat 100% 100%; background-size: 100% 1546px; }
+.promoWrap.pc section.contTicket .btnArea { position: absolute; width: 41.14%; height: 6.59%; left: 50%; bottom: 12.93%; transform: translateX(-50%); display: flex; justify-content: space-between; }
 
-.promoWrap.pc section.contTicket .clipArea .btnClip { position: absolute; right: 240px; bottom: 656px; display: block; width: 374px; height: 95px; font-size: 0; line-height: 0; outline: 1px solid red; }
-
-.promoWrap.pc section.contTicket .btnArea { position: absolute; width: 790px; height: 102px; left: 50%; bottom: 200px; transform: translateX(-50%); display: flex; justify-content: space-between; }
-
-.promoWrap.pc section.contTicket .btnArea a { display: block; height: 102px; width: calc(50% - 13px); font-size: 0; line-height: 0; outline: 1px solid red; }
-
-.promoWrap.pc section.footerLegal { width: 100%; height: 682px; background: url(../images/pc_footer.jpg) no-repeat 100% 100%; background-size: 100% 682px; }
+.promoWrap.pc section.contTicket .btnArea a { display: block; height: 100%; width: calc(50% - 1.7%); font-size: 0; line-height: 0; outline: 1px solid red; }
 
 .promoWrap.mb section { position: relative; }
 

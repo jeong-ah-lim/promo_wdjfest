@@ -34,74 +34,69 @@ body {
 
 .promoWrap.pc {
   max-width: 1920px;
-  min-width: 1920px;
-  width: 100%;
+  // min-width: 1920px;
+  // width: 100%;
   margin: 0 auto;
   section{
     position: relative;
     &.keyVisual {
-      width: 100%;
-      height: 1279px;
-      background: url(../images/pc_keyVisual.jpg) no-repeat 0 0;
-      background-size: 100% 1279px;
+      // width: 100%;
+      // height: 1279px;
+      // background: url(../images/pc_keyVisual.jpg) no-repeat 0 0;
+      // background-size: 100% 1279px;
       .btnMore{
         position: absolute;
-        right: 144px;
-        bottom: 430px;
-        width: 234px;
-        height: 90px;
+        right: 7.5%;
+        bottom: 33.62%;
+        width: 12.18%;
+        height: 7%;
         font-size: 0;
         line-height: 0;
+        outline: 1px solid red;
       }
     }//.keyVisual
     &.contVideo {
-      width: 100%;
-      height: 1577px;
-      background: url(../images/pc_contents_1.jpg) no-repeat 100% 100%;
-      background-size: 100% 1577px;
+      // width: 100%;
+      // height: 1166px;
+      // background: url(../images/pc_contents_1_2.jpg) no-repeat 0 0;
+      // background-size: 100% 100%;
+      background-color: #fff;
 
       .swiperArea{
-        width: 1435px;
+        // width: 1435px;
+        width: 100%;
         margin: 0 auto;
-        padding-top: 417px;
+        position: relative;
       }
 
       .swiper {
         width: 100%;
         height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .swiper {
-        width: 100%;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .swiper-slide {
-        background-size: cover;
-        background-position: center;
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-size: cover;
+          background-position: center;
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
 
       .mySwiper2 {
-        height: 805px;
-        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75.16%;
+        
         .swiper-wrapper{
           .swiper-slide{
             position: relative;
@@ -120,17 +115,20 @@ body {
       }
 
       .thumbsSwiper {
-        height: 20%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 13.36%; //calc(130/973 * 100)
         box-sizing: border-box;
-        padding: 32px 0;
-        margin-left: 6px;
+        margin-left: -12.4%;
         .swiper-wrapper{
           justify-content: flex-end;
           .swiper-slide {
-            width: 230px !important;
-            height: 130px;
+            width: 11.97% !important;
+            height: 100%; 
             opacity: 0.7;
-            margin-left: 20px;
+            margin-left: 1%;
             border: 3px solid #c6c7e4;
             position: relative;
             &::before{
@@ -182,24 +180,24 @@ body {
 
     }//.contVideo
     &.contBenefit{
-      width: 100%;
-      height: 1416px;
-      background: url(../images/pc_contents_2.jpg) no-repeat 100% 100%;
-      background-size: 100% 1416px;
+      // width: 100%;
+      // height: 1609px;
+      // background: url(../images/pc_contents_2.jpg) no-repeat 100% 100%;
+      // background-size: 100% 1609px;
     }//.contBenefit
     &.contTicket{
-      width: 100%;
-      height: 1546px;
-      background: url(../images/pc_contents_3.jpg) no-repeat 100% 100%;
-      background-size: 100% 1546px;
+      // width: 100%;
+      // height: 1546px;
+      // background: url(../images/pc_contents_3.jpg) no-repeat 100% 100%;
+      // background-size: 100% 1546px;
       .clipArea{
         .btnClip{
           position: absolute;
-          right: 240px;
-          bottom: 656px;
+          right: 12.5%;
+          bottom: 42.43%;
           display: block;
-          width: 374px;
-          height: 95px;
+          width: 19.47%;
+          height: 6.14%;
           font-size: 0;
           line-height: 0;
           outline: 1px solid red;
@@ -207,17 +205,17 @@ body {
       }
       .btnArea{
         position: absolute;
-        width: 790px;
-        height: 102px;
+        width: 41.14%;
+        height: 6.59%;
         left: 50%;
-        bottom: 200px;
+        bottom: 12.93%;
         transform: translateX(-50%);
         display: flex;
         justify-content: space-between;
         a{
           display: block;
-          height: 102px;
-          width: calc(50% - 13px);
+          height: 100%;
+          width: calc(50% - 1.7%);
           font-size: 0;
           line-height: 0;
           outline: 1px solid red;
@@ -225,10 +223,10 @@ body {
       }
     }//.contTicket
     &.footerLegal{
-      width: 100%;
-      height: 682px;
-      background: url(../images/pc_footer.jpg) no-repeat 100% 100%;
-      background-size: 100% 682px;
+      // width: 100%;
+      // height: 682px;
+      // background: url(../images/pc_footer.jpg) no-repeat 100% 100%;
+      // background-size: 100% 682px;
     }//.footerLegal
   }
  }//.promoWrap.pc
