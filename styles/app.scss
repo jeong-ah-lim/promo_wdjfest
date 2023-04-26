@@ -32,7 +32,7 @@ body {
   -webkit-user-drag: auto;
 }
 
-.promoWrap {
+.promoWrap.pc {
   max-width: 1920px;
   min-width: 1920px;
   width: 100%;
@@ -231,4 +231,106 @@ body {
       background-size: 100% 682px;
     }//.footerLegal
   }
- }//.promoWrap
+ }//.promoWrap.pc
+
+.promoWrap.mb {
+  section{
+    position: relative;
+    &.keyVisual{
+      .btnMore{
+        position: absolute;
+        left: calc(130/720 * 100%);
+        bottom: 31.95%; //calc(532/1665 * 100)
+        width: 64.44%;
+        height: 5.4%; //calc(90/1665 * 100)
+        font-size: 0;
+        line-height: 0;
+        outline: 1px solid red;
+      }
+    }//.keyVisual
+    &.contVideo {
+      .swiperArea{
+        width: 100%;
+        margin: 0 auto;
+        outline: 1px solid blue;
+        background: url(../images/mb_contents_1_2.jpg) no-repeat 0 0;
+        background-size: 100% 100%;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-size: cover;
+          background-position: center;
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .mySwiper3 {
+        outline: 1px solid yellow;
+        width: 100%;
+        height: 60.33%; //calc(356/590 * 100)
+        .swiper-wrapper{
+          .swiper-slide{
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            iframe{
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }//.contVideo
+    &.contTicket{
+      .clipArea{
+        .btnClip{
+          position: absolute;
+          left: 20%;
+          bottom: 43.52%; //calc(874/2008 * 100)
+          display: block;
+          width: 60.27%;
+          height: 4.48%; //calc(90/2008 * 100)
+          font-size: 0;
+          line-height: 0;
+          outline: 1px solid blue;
+        }
+      }
+      .btnArea{
+        outline: 1px solid blue;
+        position: absolute;
+        width: 60.27%;
+        height: 9.76%; //calc(196/2008 * 100)
+        left: 20%;
+        bottom: 6.17%; //calc(124/2008 * 100)
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        a{
+          display: block;
+          height: 46%;
+          width: 100%;
+          font-size: 0;
+          line-height: 0;
+          outline: 1px solid red;
+        }
+      }
+    }//.contTicket
+  }
+ }//.promoWrap.mb
