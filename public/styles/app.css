@@ -35,11 +35,11 @@ caption, legend { visibility: hidden; overflow: hidden; font-size: 0; line-heigh
 
 body { -webkit-user-drag: auto; }
 
-.promoWrap { max-width: 1920px; width: 100%; margin: 0 auto; }
+.promoWrap { max-width: 1920px; min-width: 1920px; width: 100%; margin: 0 auto; }
 
 .promoWrap section { position: relative; }
 
-.promoWrap section.keyVisual { width: 100%; height: 1279px; background: url(../images/pc_keyVisual.jpg) no-repeat 100% 100%; background-size: 100% 1279px; }
+.promoWrap section.keyVisual { width: 100%; height: 1279px; background: url(../images/pc_keyVisual.jpg) no-repeat 0 0; background-size: 100% 1279px; }
 
 .promoWrap section.keyVisual .btnMore { position: absolute; right: 144px; bottom: 430px; width: 234px; height: 90px; font-size: 0; line-height: 0; }
 
@@ -59,32 +59,36 @@ body { -webkit-user-drag: auto; }
 
 .promoWrap section.contVideo .mySwiper2 { height: 805px; width: 100%; }
 
-.promoWrap section.contVideo .mySwiper { height: 20%; box-sizing: border-box; padding: 32px 0; }
+.promoWrap section.contVideo .mySwiper2 .swiper-wrapper .swiper-slide { position: relative; width: 100%; height: 0; padding-bottom: 56.25%; }
 
-.promoWrap section.contVideo .mySwiper .swiper-wrapper { justify-content: flex-end; }
+.promoWrap section.contVideo .mySwiper2 .swiper-wrapper .swiper-slide iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
 
-.promoWrap section.contVideo .mySwiper .swiper-wrapper .swiper-slide { width: 230px !important; height: 130px; opacity: 0.7; margin-left: 20px; border: 3px solid #c6c7e4; position: relative; }
+.promoWrap section.contVideo .thumbsSwiper { height: 20%; box-sizing: border-box; padding: 32px 0; margin-left: 6px; }
 
-.promoWrap section.contVideo .mySwiper .swiper-wrapper .swiper-slide::before { position: absolute; top: 50%; left: 50%; z-index: 999; transform: translate(-50%, -50%); background: url(../images/icon_thumbs_play.png) no-repeat 0 0; background-size: 36px 40px; width: 36px; height: 40px; display: block; content: ''; }
+.promoWrap section.contVideo .thumbsSwiper .swiper-wrapper { justify-content: flex-end; }
 
-.promoWrap section.contVideo .mySwiper .swiper-wrapper .swiper-slide::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: block; content: ''; background-color: #0c0834; opacity: 0.8; width: 100%; height: 100%; }
+.promoWrap section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide { width: 230px !important; height: 130px; opacity: 0.7; margin-left: 20px; border: 3px solid #c6c7e4; position: relative; }
 
-.promoWrap section.contVideo .mySwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active { opacity: 1; border: 3px solid #e3e4fd; }
+.promoWrap section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide::before { position: absolute; top: 50%; left: 50%; z-index: 999; transform: translate(-50%, -50%); background: url(../images/icon_thumbs_play.png) no-repeat 0 0; background-size: 36px 40px; width: 36px; height: 40px; display: block; content: ''; }
 
-.promoWrap section.contVideo .mySwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active::before { display: none; }
+.promoWrap section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: block; content: ''; background-color: #0c0834; opacity: 0.8; width: 100%; height: 100%; }
 
-.promoWrap section.contVideo .mySwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active::after { display: none; }
+.promoWrap section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active { opacity: 1; border: 3px solid #e3e4fd; }
 
-.promoWrap section.contVideo .mySwiper .swiper-wrapper .swiper-slide img { display: block; width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; }
+.promoWrap section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active::before { display: none; }
+
+.promoWrap section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active::after { display: none; }
+
+.promoWrap section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide img { display: block; width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; }
 
 .promoWrap section.contBenefit { width: 100%; height: 1416px; background: url(../images/pc_contents_2.jpg) no-repeat 100% 100%; background-size: 100% 1416px; }
 
 .promoWrap section.contTicket { width: 100%; height: 1546px; background: url(../images/pc_contents_3.jpg) no-repeat 100% 100%; background-size: 100% 1546px; }
 
-.promoWrap section.contTicket .clipArea .btnClip { position: absolute; right: 246px; bottom: 656px; display: block; width: 368px; height: 95px; font-size: 0; line-height: 0; }
+.promoWrap section.contTicket .clipArea .btnClip { position: absolute; right: 240px; bottom: 656px; display: block; width: 374px; height: 95px; font-size: 0; line-height: 0; outline: 1px solid red; }
 
-.promoWrap section.contTicket .btnArea { position: absolute; width: 764px; height: 102px; left: 50%; bottom: 200px; transform: translateX(-50%); display: flex; justify-content: space-between; }
+.promoWrap section.contTicket .btnArea { position: absolute; width: 790px; height: 102px; left: 50%; bottom: 200px; transform: translateX(-50%); display: flex; justify-content: space-between; }
 
-.promoWrap section.contTicket .btnArea a { display: block; height: 102px; width: 368px; font-size: 0; line-height: 0; }
+.promoWrap section.contTicket .btnArea a { display: block; height: 102px; width: calc(50% - 13px); font-size: 0; line-height: 0; outline: 1px solid red; }
 
 .promoWrap section.footerLegal { width: 100%; height: 682px; background: url(../images/pc_footer.jpg) no-repeat 100% 100%; background-size: 100% 682px; }

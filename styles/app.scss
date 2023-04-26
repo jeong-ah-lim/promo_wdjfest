@@ -34,7 +34,7 @@ body {
 
 .promoWrap {
   max-width: 1920px;
-  // min-width: 1920px;
+  min-width: 1920px;
   width: 100%;
   margin: 0 auto;
   section{
@@ -42,7 +42,7 @@ body {
     &.keyVisual {
       width: 100%;
       height: 1279px;
-      background: url(../images/pc_keyVisual.jpg) no-repeat 100% 100%;
+      background: url(../images/pc_keyVisual.jpg) no-repeat 0 0;
       background-size: 100% 1279px;
       .btnMore{
         position: absolute;
@@ -87,11 +87,6 @@ body {
         object-fit: cover;
       }
 
-      // body {
-      //   background: #000;
-      //   color: #000;
-      // }
-
       .swiper {
         width: 100%;
         height: 300px;
@@ -107,12 +102,28 @@ body {
       .mySwiper2 {
         height: 805px;
         width: 100%;
+        .swiper-wrapper{
+          .swiper-slide{
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            iframe{
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
       }
 
-      .mySwiper {
+      .thumbsSwiper {
         height: 20%;
         box-sizing: border-box;
         padding: 32px 0;
+        margin-left: 6px;
         .swiper-wrapper{
           justify-content: flex-end;
           .swiper-slide {
@@ -184,18 +195,19 @@ body {
       .clipArea{
         .btnClip{
           position: absolute;
-          right: 246px;
+          right: 240px;
           bottom: 656px;
           display: block;
-          width: 368px;
+          width: 374px;
           height: 95px;
           font-size: 0;
           line-height: 0;
+          outline: 1px solid red;
         }
       }
       .btnArea{
         position: absolute;
-        width: 764px;
+        width: 790px;
         height: 102px;
         left: 50%;
         bottom: 200px;
@@ -205,9 +217,10 @@ body {
         a{
           display: block;
           height: 102px;
-          width: 368px;
+          width: calc(50% - 13px);
           font-size: 0;
           line-height: 0;
+          outline: 1px solid red;
         }
       }
     }//.contTicket

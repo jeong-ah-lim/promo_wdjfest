@@ -1,6 +1,6 @@
 (function(){
     //start - swiper
-    const swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".thumbsSwiper", {
         slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true,
