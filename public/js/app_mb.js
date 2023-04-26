@@ -1,9 +1,14 @@
 (function(){
     //start - swiper
     const swiper3 = new Swiper(".mySwiper3", {
+        loop: true,
+        autoplay: {
+            delay: 500,
+            disableOnInteraction: false,
+        },
         spaceBetween: 20,
         slidesPerView: 2,
-        centeredSlides: true,
+        // centeredSlides: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",

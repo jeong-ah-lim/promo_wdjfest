@@ -93,9 +93,9 @@ body { -webkit-user-drag: auto; }
 
 .promoWrap.mb section.contVideo .swiper .swiper-slide img { display: block; width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; }
 
-.promoWrap.mb section.contVideo .mySwiper3 { outline: 1px solid yellow; width: 100%; height: 60.33%; }
+.promoWrap.mb section.contVideo .mySwiper3 { outline: 1px solid yellow; width: 100%; height: 60.33%; padding-left: 7.5%; }
 
-.promoWrap.mb section.contVideo .mySwiper3 .swiper-wrapper .swiper-slide { position: relative; width: 100%; height: 0; padding-bottom: 56.25%; }
+.promoWrap.mb section.contVideo .mySwiper3 .swiper-wrapper .swiper-slide { position: relative; width: 85% !important; height: 0; padding-bottom: 56.25%; }
 
 .promoWrap.mb section.contVideo .mySwiper3 .swiper-wrapper .swiper-slide iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
 
