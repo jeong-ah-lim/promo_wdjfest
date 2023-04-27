@@ -33,10 +33,30 @@ body {
 }
 
 .promoWrap.pc {
+  position: relative;
   max-width: 1920px;
   // min-width: 1920px;
   // width: 100%;
   margin: 0 auto;
+  &.on{
+    .tooltip {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
+      height: 30px;
+      background-color: #8258CC;
+      color: #fff;
+      line-height: 30px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .tooltip {
+    display: none;
+    transition: all 0 ease;
+  }
   section{
     position: relative;
     &.keyVisual {
@@ -232,6 +252,25 @@ body {
  }//.promoWrap.pc
 
 .promoWrap.mb {
+  &.on {
+    .tooltip {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
+      height: 30px;
+      background-color: #8258CC;
+      color: #fff;
+      line-height: 30px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .tooltip {
+    display: none;
+    transition: all 0 ease;
+  }
   section{
     position: relative;
     &.keyVisual{

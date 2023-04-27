@@ -35,7 +35,11 @@ caption, legend { visibility: hidden; overflow: hidden; font-size: 0; line-heigh
 
 body { -webkit-user-drag: auto; }
 
-.promoWrap.pc { max-width: 1920px; margin: 0 auto; }
+.promoWrap.pc { position: relative; max-width: 1920px; margin: 0 auto; }
+
+.promoWrap.pc.on .tooltip { position: fixed; top: 0; left: 0; z-index: 999; width: 100%; height: 30px; background-color: #8258CC; color: #fff; line-height: 30px; display: flex; justify-content: center; }
+
+.promoWrap.pc .tooltip { display: none; transition: all 0 ease; }
 
 .promoWrap.pc section { position: relative; }
 
@@ -80,6 +84,10 @@ body { -webkit-user-drag: auto; }
 .promoWrap.pc section.contTicket .btnArea { position: absolute; width: 41.14%; height: 6.59%; left: 50%; bottom: 12.93%; transform: translateX(-50%); display: flex; justify-content: space-between; }
 
 .promoWrap.pc section.contTicket .btnArea a { display: block; height: 100%; width: calc(50% - 1.7%); font-size: 0; line-height: 0; outline: 1px solid red; }
+
+.promoWrap.mb.on .tooltip { position: fixed; top: 0; left: 0; z-index: 999; width: 100%; height: 30px; background-color: #8258CC; color: #fff; line-height: 30px; display: flex; justify-content: center; }
+
+.promoWrap.mb .tooltip { display: none; transition: all 0 ease; }
 
 .promoWrap.mb section { position: relative; }
 

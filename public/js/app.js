@@ -30,10 +30,19 @@
         document.body.removeChild(textarea);
     }
 
+    function onTooltip(){
+        const promoWrap = document.querySelector('.promoWrap');
+        promoWrap.classList.add('on');
+        setTimeout(() => {
+            promoWrap.classList.remove('on');
+        }, 1500);
+    }
+
     function onClip(e){
         e.preventDefault();
         const hashTag = document.querySelector('.hashTag').textContent;
         copyHashTag(hashTag);
+        onTooltip();
     }
     btnClip.addEventListener('click', onClip);
     //end - 해시태그 복사하기
