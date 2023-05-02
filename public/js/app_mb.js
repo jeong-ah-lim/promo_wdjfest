@@ -7,7 +7,7 @@
         //     prevEl: ".swiper-button-prev",
         // },
         spaceBetween: 20,
-        slidesPerView: 2,
+        // slidesPerView: 1,
         // centeredSlides: true,
     });
     //end - swiper
@@ -15,6 +15,7 @@
     const promoWrap = document.querySelector('.promoWrap');
     const ctaVideo = document.querySelector('.swiper-wrapper');
     let ctaEmbedName;
+    let ctaEmbedTit;
 
     function onCreateIframe(){
         const popIframe = document.createElement('div'); //div 생성
@@ -23,7 +24,7 @@
         popIframe.innerHTML = `
         <a href="#" class="btnClose">닫기</a>
         <div class="iframeWrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/${ctaEmbedName}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/${ctaEmbedName}" title="${ctaEmbedTit}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         `;
         //popup DOM 추가
@@ -43,6 +44,7 @@
     //요소 클릭
     ctaVideo.addEventListener('click', function(e) { 
         ctaEmbedName = e.target.dataset.name;
+        ctaEmbedTit = e.target.dataset.title;
         onCreateIframe();
     })
 
