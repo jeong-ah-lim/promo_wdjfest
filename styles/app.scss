@@ -45,13 +45,29 @@ body {
       opacity: 0.9;
       .btnClose{
         color: #fff;
-      }
-      iframe{
         position: absolute;
+        right: 0;
         top: 50%;
+        transform: translateY(-50%);
+        margin-top: -35%;
+      }
+      .iframeWrap{
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
         left: 50%;
+        top: 50%;
         transform: translate(-50%, -50%);
-        width: 80%;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -60,8 +76,6 @@ body {
 .promoWrap.pc {
   position: relative;
   max-width: 1920px;
-  // min-width: 1920px;
-  // width: 100%;
   margin: 0 auto;
   &.on{
     .tooltip {
@@ -148,6 +162,7 @@ body {
             width: 100%;
             height: 0;
             padding-bottom: 56.25%;
+            border: 5px solid #e4e4fe;
             iframe{
               position: absolute;
               width: 100%;
@@ -341,22 +356,24 @@ body {
       }
       .mySwiper3 {
         outline: 1px solid yellow;
+        position: relative;
         width: 100%;
-        height: 60.33%; //calc(356/590 * 100)
-        padding-left: 7.5%;
+        height: 0; 
+        padding-bottom: 49.16%; //calc(354/720 * 100)
+        // padding-left: 7.5%;
         .swiper-wrapper{
+          position: absolute;
+          top: 0;
+          left: 7.5%;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
           .swiper-slide{
-            // position: relative;
-            // width: 85% !important;
-            // height: 0;
-            // padding-bottom: 56.25%;
-            // iframe{
-            //   position: absolute;
-            //   width: 100%;
-            //   height: 100%;
-            //   top: 0;
-            //   left: 0;
-            // }
+            width: 84.72% !important; //calc(610/720 * 100)
+            a{
+              width: 100%;
+            }
           }
         }
       }

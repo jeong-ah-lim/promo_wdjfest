@@ -2,10 +2,10 @@
     //start - swiper
     const swiper3 = new Swiper(".mySwiper3", {
         loop: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+        // navigation: {
+        //     nextEl: ".swiper-button-next",
+        //     prevEl: ".swiper-button-prev",
+        // },
         spaceBetween: 20,
         slidesPerView: 2,
         // centeredSlides: true,
@@ -22,7 +22,9 @@
         //iframe URL id 추가
         popIframe.innerHTML = `
         <a href="#" class="btnClose">닫기</a>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/${ctaEmbedName}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="iframeWrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/${ctaEmbedName}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
         `;
         //popup DOM 추가
         promoWrap.appendChild(popIframe);

@@ -9,10 +9,10 @@
         loop: true,
         effect: 'fade',
         spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+        // navigation: {
+        //     nextEl: ".swiper-button-next",
+        //     prevEl: ".swiper-button-prev",
+        // },
         thumbs: {
             swiper: swiper,
         },
