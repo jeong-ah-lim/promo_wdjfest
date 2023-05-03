@@ -1,28 +1,62 @@
 (function(){
-    
-
     //start - swiper
-    const swiper = new Swiper(".thumbsSwiper", {
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-    });
-    const swiper2 = new Swiper(".mySwiper2", {
-        loop: true,
-        effect: 'fade',
-        spaceBetween: 10,
-        thumbs: {
-            swiper: swiper,
-        },
-    });
+    let swiperDesktop;
+    let swiperDesktopThumb;
+    let swiperMobile;
+
+    const mediaQueryList = window.matchMedia('only screen and (max-width: 720px)');
+    mediaQueryList.addEventListener('change', onChangeMediaQuery);
+    onChangeMediaQuery(mediaQueryList);
+
+    function onChangeMediaQuery(event) {
+        const isMobile = event.matches;
+
+        if (isMobile && !swiperMobile) {
+            swiperMobile = new Swiper(".mySwiper3", {
+                loop: true,
+                spaceBetween: 20,
+            });
+        } else if (!isMobile && !swiperDesktopThumb && !swiperDesktop) {
+            swiperDesktopThumb = new Swiper(".thumbsSwiper", {
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+            swiperDesktop = new Swiper(".mySwiper2", {
+                loop: true,
+                effect: 'fade',
+                spaceBetween: 10,
+                thumbs: {
+                    swiper: swiperDesktopThumb,
+                },
+            });
+        }
+    }
     //end - swiper
+
+    function getIsMobile() {
+        return window.matchMedia('only screen and (max-width: 720px)').matches;
+    }
+
+    document.body.addEventListener('click', function (event) {
+        const classList = event.target.classList;
+
+        if (!classList) return;
+        
+        if (classList.contains('btnClip')) {
+            onClip(event);
+        }
+
+        if (event.target.parentElement.classList.contains('ctaVideo') && event.target.tagName.toLowerCase() === 'img') {
+            onClickCtaVideo(event);
+        }
+    });
+
     // start - 영상 영역
-    const promoWrap = document.querySelector('.promoWrap');
-    const ctaVideo = document.querySelector('.swiper-wrapper');
     let ctaEmbedName;
     let ctaEmbedTit;
 
-    function onCreateIframe(){
+    function onCreateIframe(promoWrap){
         const popIframe = document.createElement('div'); 
         popIframe.setAttribute('class', 'popIframe'); 
         popIframe.innerHTML = `
@@ -39,25 +73,31 @@
 
         function onClose(e){
             e.preventDefault();
+
+            if (!document.body.classList.contains('show')) return;
             document.body.classList.remove('show');
             promoWrap.removeChild(popIframe);
+            btnClose.removeEventListener('click', onClose);
+            popIframe.removeEventListener('click', onClose);
         }
         const btnClose = document.querySelector('.btnClose');
         btnClose.addEventListener('click', onClose);
         popIframe.addEventListener('click', onClose);
     }
 
-    ctaVideo.addEventListener('click', function(e) { 
+    function onClickCtaVideo(e) { 
         e.preventDefault();
         ctaEmbedName = e.target.dataset.name;
         ctaEmbedTit = e.target.dataset.title;
-        onCreateIframe();
-    })
+
+        const isMobile = getIsMobile();
+        const promoWrap = document.querySelector('.promoWrap' + (isMobile ? '.mb' : '.pc'));
+
+        onCreateIframe(promoWrap);
+    }
     // end - 영상 영역
 
-    //start - 해시태그 복사하기 
-    const btnClip = document.querySelector('.btnClip');
-    
+    //start - 해시태그 복사하기     
     function copyHashTag(text){
         const textarea = document.createElement('textarea');
         textarea.value = text;
@@ -68,7 +108,8 @@
     }
 
     function onTooltip(){
-        const promoWrap = document.querySelector('.promoWrap');
+        const isMobile = getIsMobile();
+        const promoWrap = document.querySelector('.promoWrap' + (isMobile ? '.mb' : '.pc'));
         promoWrap.classList.add('on');
         setTimeout(() => {
             promoWrap.classList.remove('on');
@@ -77,20 +118,9 @@
 
     function onClip(e){
         e.preventDefault();
-        const hashTag = document.querySelector('.hashTag').textContent;
+        const hashTag = e.target.previousElementSibling.textContent;
         copyHashTag(hashTag);
         onTooltip();
     }
-    btnClip.addEventListener('click', onClip);
     //end - 해시태그 복사하기
-
-
-    const isMobile = window.matchMedia("only screen and (max-width: 720px)").matches;
-    if (isMobile) {
-        // mobile only code
-        const swiper3 = new Swiper(".mySwiper3", {
-            loop: true,
-            spaceBetween: 20,
-        });
-    }
 })();
