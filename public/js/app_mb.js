@@ -16,24 +16,30 @@
         const popIframe = document.createElement('div'); 
         popIframe.setAttribute('class', 'popIframe'); 
         popIframe.innerHTML = `
-        <a href="#" class="btnClose">닫기</a>
-        <div class="iframeWrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/${ctaEmbedName}" title="${ctaEmbedTit}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="iframeArea">
+            <a href="#" class="btnClose">닫기</a>
+            <div class="iframeWrap">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/${ctaEmbedName}" title="${ctaEmbedTit}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </div>
         `;
         promoWrap.appendChild(popIframe);
 
         document.body.classList.add('show');
 
-        function onClose(){
+        function onClose(e){
+            e.preventDefault();
             document.body.classList.remove('show');
             promoWrap.removeChild(popIframe);
         }
         const btnClose = document.querySelector('.btnClose');
+        const iframeArea = document.querySelector('.iframeArea');
         btnClose.addEventListener('click', onClose);
+        iframeArea.addEventListener('click', onClose);
     }
 
     ctaVideo.addEventListener('click', function(e) { 
+        e.preventDefault();
         ctaEmbedName = e.target.dataset.name;
         ctaEmbedTit = e.target.dataset.title;
         onCreateIframe();

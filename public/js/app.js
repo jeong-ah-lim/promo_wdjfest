@@ -36,15 +36,19 @@
 
         document.body.classList.add('show');
 
-        function onClose(){
+        function onClose(e){
+            e.preventDefault();
             document.body.classList.remove('show');
             promoWrap.removeChild(popIframe);
         }
         const btnClose = document.querySelector('.btnClose');
+        const iframeArea = document.querySelector('.iframeArea');
         btnClose.addEventListener('click', onClose);
+        iframeArea.addEventListener('click', onClose);
     }
 
     ctaVideo.addEventListener('click', function(e) { 
+        e.preventDefault();
         ctaEmbedName = e.target.dataset.name;
         ctaEmbedTit = e.target.dataset.title;
         onCreateIframe();
