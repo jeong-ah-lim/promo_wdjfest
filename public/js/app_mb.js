@@ -21,10 +21,8 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/${ctaEmbedName}" title="${ctaEmbedTit}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         `;
-        //popup DOM 추가
         promoWrap.appendChild(popIframe);
 
-        //body에 show 클래스 추가해서 dim 처리
         document.body.classList.add('show');
 
         function onClose(){
@@ -35,7 +33,6 @@
         btnClose.addEventListener('click', onClose);
     }
 
-    //영상 요소 클릭할 때, 이벤트 처리
     ctaVideo.addEventListener('click', function(e) { 
         ctaEmbedName = e.target.dataset.name;
         ctaEmbedTit = e.target.dataset.title;

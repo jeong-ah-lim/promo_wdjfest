@@ -9,15 +9,47 @@
         loop: true,
         effect: 'fade',
         spaceBetween: 10,
-        // navigation: {
-        //     nextEl: ".swiper-button-next",
-        //     prevEl: ".swiper-button-prev",
-        // },
         thumbs: {
             swiper: swiper,
         },
     });
     //end - swiper
+
+    // start - 영상 영역
+    const promoWrap = document.querySelector('.promoWrap');
+    const ctaVideo = document.querySelector('.swiper-wrapper');
+    let ctaEmbedName;
+    let ctaEmbedTit;
+
+    function onCreateIframe(){
+        const popIframe = document.createElement('div'); 
+        popIframe.setAttribute('class', 'popIframe'); 
+        popIframe.innerHTML = `
+        <div class="iframeArea">
+            <a href="#" class="btnClose">닫기</a>
+            <div class="iframeWrap">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/${ctaEmbedName}" title="${ctaEmbedTit}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        `;
+        promoWrap.appendChild(popIframe);
+
+        document.body.classList.add('show');
+
+        function onClose(){
+            document.body.classList.remove('show');
+            promoWrap.removeChild(popIframe);
+        }
+        const btnClose = document.querySelector('.btnClose');
+        btnClose.addEventListener('click', onClose);
+    }
+
+    ctaVideo.addEventListener('click', function(e) { 
+        ctaEmbedName = e.target.dataset.name;
+        ctaEmbedTit = e.target.dataset.title;
+        onCreateIframe();
+    })
+    // end - 영상 영역
 
     //start - 해시태그 복사하기 
     const btnClip = document.querySelector('.btnClip');
