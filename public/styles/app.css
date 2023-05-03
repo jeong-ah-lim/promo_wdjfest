@@ -37,9 +37,11 @@ body { -webkit-user-drag: auto; }
 
 body.show { position: relative; overflow: hidden; }
 
-body.show .popIframe { position: fixed; width: 100%; height: 100%; top: 0; left: 0; bottom: 0; right: 0; background-color: #111; opacity: 0.9; }
+body.show .popIframe { position: fixed; width: 100%; height: 100%; top: 0; left: 0; bottom: 0; right: 0; background-color: #00000099; }
 
-body.show .popIframe .btnClose { color: #fff; position: absolute; right: 0; top: 50%; transform: translateY(-50%); margin-top: -35%; }
+body.show .popIframe .btnClose { color: #fff; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); margin-top: -35%; font-size: 0; line-height: 0; width: 32px; height: 32px; }
+
+body.show .popIframe .btnClose::before { display: block; content: ''; width: 32px; height: 32px; background: url(../images/mb_icon_btn_close.png) no-repeat 0 0; background-size: 32px 32px; }
 
 body.show .popIframe .iframeWrap { position: relative; width: 100%; height: 0; padding-bottom: 56.25%; left: 50%; top: 50%; transform: translate(-50%, -50%); }
 
@@ -101,9 +103,9 @@ body.show .popIframe .iframeWrap iframe { position: absolute; top: 0; left: 0; b
 
 .promoWrap.mb section { position: relative; }
 
-.promoWrap.mb section.keyVisual .btnMore { position: absolute; left: calc(130/720 * 100%); bottom: 31.95%; width: 64.44%; height: 5.4%; font-size: 0; line-height: 0; outline: 1px solid red; }
+.promoWrap.mb section.keyVisual .btnMore { position: absolute; left: calc(130/720 * 100%); bottom: 31.95%; width: 64.44%; height: 5.4%; font-size: 0; line-height: 0; }
 
-.promoWrap.mb section.contVideo .swiperArea { width: 100%; margin: 0 auto; outline: 1px solid blue; background: url(../images/mb_contents_1_2.jpg) no-repeat 0 0; background-size: 100% 100%; }
+.promoWrap.mb section.contVideo .swiperArea { width: 100%; margin: 0 auto; background: url(../images/mb_contents_1_2.jpg) no-repeat 0 0; background-size: 100% 100%; }
 
 .promoWrap.mb section.contVideo .swiper { width: 100%; height: 100%; margin: 0 auto; }
 
@@ -111,7 +113,7 @@ body.show .popIframe .iframeWrap iframe { position: absolute; top: 0; left: 0; b
 
 .promoWrap.mb section.contVideo .swiper .swiper-slide img { display: block; width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; }
 
-.promoWrap.mb section.contVideo .mySwiper3 { outline: 1px solid yellow; position: relative; width: 100%; height: 0; padding-bottom: 49.16%; padding-left: 7.5%; padding-right: 7.5%; }
+.promoWrap.mb section.contVideo .mySwiper3 { position: relative; width: 100%; height: 0; padding-bottom: 49.16%; padding-left: 7.5%; padding-right: 7.5%; }
 
 .promoWrap.mb section.contVideo .mySwiper3 .swiper-wrapper { position: absolute; top: 0; left: 7.5%; bottom: 0; right: 0; width: 100%; height: 100%; }
 
@@ -119,8 +121,8 @@ body.show .popIframe .iframeWrap iframe { position: absolute; top: 0; left: 0; b
 
 .promoWrap.mb section.contVideo .mySwiper3 .swiper-wrapper .swiper-slide a { width: 100%; }
 
-.promoWrap.mb section.contTicket .clipArea .btnClip { position: absolute; left: 20%; bottom: 43.52%; display: block; width: 60.27%; height: 4.48%; font-size: 0; line-height: 0; outline: 1px solid blue; }
+.promoWrap.mb section.contTicket .clipArea .btnClip { position: absolute; left: 20%; bottom: 38.18%; display: block; width: 60.27%; height: 3.93%; font-size: 0; line-height: 0; }
 
-.promoWrap.mb section.contTicket .btnArea { outline: 1px solid blue; position: absolute; width: 60.27%; height: 9.76%; left: 20%; bottom: 6.17%; display: flex; flex-direction: column; justify-content: space-between; }
+.promoWrap.mb section.contTicket .btnArea { position: absolute; width: 60.27%; height: 8.56%; left: 20%; bottom: 5.41%; display: flex; flex-direction: column; justify-content: space-between; }
 
-.promoWrap.mb section.contTicket .btnArea a { display: block; height: 46%; width: 100%; font-size: 0; line-height: 0; outline: 1px solid red; }
+.promoWrap.mb section.contTicket .btnArea a { display: block; height: 46%; width: 100%; font-size: 0; line-height: 0; }

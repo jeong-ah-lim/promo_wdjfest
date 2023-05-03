@@ -41,15 +41,26 @@ body {
       left: 0;
       bottom: 0;
       right: 0;
-      background-color: #111;
-      opacity: 0.9;
+      background-color: #00000099;
       .btnClose{
+        &::before{
+          display: block;
+          content: '';
+          width: 32px;
+          height: 32px;
+          background: url(../images/mb_icon_btn_close.png) no-repeat 0 0;
+          background-size: 32px 32px;
+        }
         color: #fff;
         position: absolute;
-        right: 0;
+        right: 5%;
         top: 50%;
         transform: translateY(-50%);
         margin-top: -35%;
+        font-size: 0;
+        line-height: 0;
+        width: 32px;
+        height: 32px;
       }
       .iframeWrap{
         position: relative;
@@ -322,14 +333,12 @@ body {
         height: 5.4%; //calc(90/1665 * 100)
         font-size: 0;
         line-height: 0;
-        outline: 1px solid red;
       }
     }//.keyVisual
     &.contVideo {
       .swiperArea{
         width: 100%;
         margin: 0 auto;
-        outline: 1px solid blue;
         background: url(../images/mb_contents_1_2.jpg) no-repeat 0 0;
         background-size: 100% 100%;
       }
@@ -355,12 +364,11 @@ body {
         }
       }
       .mySwiper3 {
-        outline: 1px solid yellow;
         position: relative;
         width: 100%;
         height: 0; 
         padding-bottom: 49.16%; //calc(354/720 * 100)
-        padding-left: 7.5%; //
+        padding-left: 7.5%; 
         padding-right: 7.5%;
         .swiper-wrapper{
           position: absolute;
@@ -384,22 +392,20 @@ body {
         .btnClip{
           position: absolute;
           left: 20%;
-          bottom: 43.52%; //calc(874/2008 * 100)
+          bottom: 38.18%; //calc(874/2289 * 100)
           display: block;
           width: 60.27%;
-          height: 4.48%; //calc(90/2008 * 100)
+          height: 3.93%; //calc(90/2289 * 100)
           font-size: 0;
           line-height: 0;
-          outline: 1px solid blue;
         }
       }
       .btnArea{
-        outline: 1px solid blue;
         position: absolute;
         width: 60.27%;
-        height: 9.76%; //calc(196/2008 * 100)
+        height: 8.56%; //calc(196/2289 * 100)
         left: 20%;
-        bottom: 6.17%; //calc(124/2008 * 100)
+        bottom: 5.41%; //calc(124/2289 * 100)
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -409,7 +415,6 @@ body {
           width: 100%;
           font-size: 0;
           line-height: 0;
-          outline: 1px solid red;
         }
       }
     }//.contTicket
