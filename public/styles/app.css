@@ -87,7 +87,7 @@ body.show .promoWrap.mb .popIframe .iframeWrap iframe { position: absolute; top:
 
 .promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper { justify-content: flex-end; }
 
-.promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide { width: 11.97% !important; height: 100%; opacity: 0.7; margin-left: 1%; position: relative; }
+.promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide { width: 11.97% !important; height: 100%; margin-left: 1%; position: relative; }
 
 .promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide::before { position: absolute; top: 50%; left: 50%; z-index: 999; transform: translate(-50%, -50%); background: url(../images/icon_thumbs_play.png) no-repeat 0 0; background-size: 36px 40px; width: 36px; height: 40px; display: block; content: ''; }
 
