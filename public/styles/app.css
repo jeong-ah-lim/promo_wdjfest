@@ -41,9 +41,9 @@ body.show .promoWrap.pc .popIframe { position: fixed; width: 100%; height: 100%;
 
 body.show .promoWrap.pc .popIframe::before { display: block; content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.8; }
 
-body.show .promoWrap.pc .popIframe .iframeArea { position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 1920px; width: calc(100% - 30%); height: 100%; }
+body.show .promoWrap.pc .popIframe .iframeArea { position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 1920px; width: calc(100% - 30%); height: 80%; }
 
-body.show .promoWrap.pc .popIframe .iframeArea .btnClose { color: #fff; position: absolute; right: 0; top: 40%; transform: translateY(-50%); margin-top: -370px; font-size: 0; line-height: 0; width: 32px; height: 32px; }
+body.show .promoWrap.pc .popIframe .iframeArea .btnClose { color: #fff; position: absolute; right: 0; top: 0; transform: translateY(-50%); font-size: 0; line-height: 0; width: 32px; height: 32px; }
 
 body.show .promoWrap.pc .popIframe .iframeArea .btnClose::before { display: block; content: ''; width: 32px; height: 32px; background: url(../images/mb_icon_btn_close.png) no-repeat 0 0; background-size: 32px 32px; }
 
@@ -95,7 +95,7 @@ body.show .promoWrap.mb .popIframe .iframeArea .iframeWrap iframe { position: ab
 
 .promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide { width: 11.97% !important; height: 100%; margin-left: 1%; position: relative; }
 
-.promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide::before { position: absolute; top: 50%; left: 50%; z-index: 999; transform: translate(-50%, -50%); background: url(../images/icon_thumbs_play.png) no-repeat 0 0; background-size: 36px 40px; width: 36px; height: 40px; display: block; content: ''; }
+.promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide::before { position: absolute; top: 50%; left: 50%; z-index: 999; transform: translate(-50%, -50%); background: url(../images/icon_thumbs_play.png) no-repeat 0 0; background-size: 100% 100%; width: 15.65%; height: 30.76%; display: block; content: ''; }
 
 .promoWrap.pc section.contVideo .thumbsSwiper .swiper-wrapper .swiper-slide::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: block; content: ''; background-color: #0c0834; opacity: 0.8; width: 100%; height: 100%; }
 

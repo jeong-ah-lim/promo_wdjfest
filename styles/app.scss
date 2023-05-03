@@ -64,7 +64,7 @@ body {
           transform: translate(-50%, -50%);
           max-width: 1920px;
           width: calc(100% - 30%);
-          height: 100%;
+          height: 80%;
           .btnClose {
             &::before {
               display: block;
@@ -78,9 +78,8 @@ body {
             color: #fff;
             position: absolute;
             right: 0;
-            top: 40%;
+            top: 0;
             transform: translateY(-50%);
-            margin-top: -370px;
             font-size: 0;
             line-height: 0;
             width: 32px;
@@ -289,9 +288,9 @@ body {
               z-index: 999;
               transform: translate(-50%, -50%);
               background: url(../images/icon_thumbs_play.png) no-repeat 0 0;
-              background-size: 36px 40px;
-              width: 36px;
-              height: 40px;
+              background-size: 100% 100%;
+              width: 15.65%;
+              height: 30.76%;
               display: block;
               content: '';
             }
