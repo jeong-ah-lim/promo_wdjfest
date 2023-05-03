@@ -113,6 +113,8 @@ body.show .promoWrap.mb .popIframe .iframeArea .iframeWrap iframe { position: ab
 
 .promoWrap.pc section.contTicket .btnArea a { display: block; height: 100%; width: calc(50% - 1.7%); font-size: 0; line-height: 0; }
 
+@media (max-width: 720px) { .promoWrap.pc { display: none; } }
+
 .promoWrap.mb.on .tooltip { position: fixed; top: 0; left: 0; z-index: 999; width: 100%; height: 30px; background-color: #8258CC; color: #fff; line-height: 30px; display: flex; justify-content: center; }
 
 .promoWrap.mb .tooltip { display: none; transition: all 0 ease; }
@@ -142,3 +144,5 @@ body.show .promoWrap.mb .popIframe .iframeArea .iframeWrap iframe { position: ab
 .promoWrap.mb section.contTicket .btnArea { position: absolute; width: 60.27%; height: 8.56%; left: 20%; bottom: 5.41%; display: flex; flex-direction: column; justify-content: space-between; }
 
 .promoWrap.mb section.contTicket .btnArea a { display: block; height: 46%; width: 100%; font-size: 0; line-height: 0; }
+
+@media (min-width: 721px) { .promoWrap.mb { display: none; } }

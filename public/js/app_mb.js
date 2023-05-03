@@ -33,9 +33,8 @@
             promoWrap.removeChild(popIframe);
         }
         const btnClose = document.querySelector('.btnClose');
-        const iframeArea = document.querySelector('.iframeArea');
         btnClose.addEventListener('click', onClose);
-        iframeArea.addEventListener('click', onClose);
+        popIframe.addEventListener('click', onClose);
     }
 
     ctaVideo.addEventListener('click', function(e) { 

@@ -330,7 +330,7 @@ body {
     }//.contVideo
     &.contTicket{
       .clipArea{
-        .btnClip{
+        .btnClip {
           position: absolute;
           right: 12.5%;
           bottom: 42.43%;
@@ -359,6 +359,9 @@ body {
         }
       }
     }//.contTicket
+  }
+  @media (max-width: 720px) {
+    display: none;
   }
  }//.promoWrap.pc
 
@@ -449,7 +452,7 @@ body {
     }//.contVideo
     &.contTicket{
       .clipArea{
-        .btnClip{
+        .btnClip {
           position: absolute;
           left: 20%;
           bottom: 38.18%; //calc(874/2289 * 100)
@@ -478,5 +481,8 @@ body {
         }
       }
     }//.contTicket
+  }
+  @media (min-width: 721px) {
+    display: none;
   }
  }//.promoWrap.mb

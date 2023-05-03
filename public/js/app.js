@@ -1,4 +1,6 @@
 (function(){
+    
+
     //start - swiper
     const swiper = new Swiper(".thumbsSwiper", {
         slidesPerView: 4,
@@ -14,7 +16,6 @@
         },
     });
     //end - swiper
-
     // start - 영상 영역
     const promoWrap = document.querySelector('.promoWrap');
     const ctaVideo = document.querySelector('.swiper-wrapper');
@@ -83,4 +84,13 @@
     btnClip.addEventListener('click', onClip);
     //end - 해시태그 복사하기
 
+
+    const isMobile = window.matchMedia("only screen and (max-width: 720px)").matches;
+    if (isMobile) {
+        // mobile only code
+        const swiper3 = new Swiper(".mySwiper3", {
+            loop: true,
+            spaceBetween: 20,
+        });
+    }
 })();
