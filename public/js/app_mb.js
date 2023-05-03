@@ -2,25 +2,19 @@
     //start - swiper
     const swiper3 = new Swiper(".mySwiper3", {
         loop: true,
-        // navigation: {
-        //     nextEl: ".swiper-button-next",
-        //     prevEl: ".swiper-button-prev",
-        // },
         spaceBetween: 20,
-        // slidesPerView: 1,
-        // centeredSlides: true,
     });
     //end - swiper
 
+    // start - 영상 영역
     const promoWrap = document.querySelector('.promoWrap');
     const ctaVideo = document.querySelector('.swiper-wrapper');
     let ctaEmbedName;
     let ctaEmbedTit;
 
     function onCreateIframe(){
-        const popIframe = document.createElement('div'); //div 생성
-        popIframe.setAttribute('class', 'popIframe'); //class 추가
-        //iframe URL id 추가
+        const popIframe = document.createElement('div'); 
+        popIframe.setAttribute('class', 'popIframe'); 
         popIframe.innerHTML = `
         <a href="#" class="btnClose">닫기</a>
         <div class="iframeWrap">
@@ -41,12 +35,13 @@
         btnClose.addEventListener('click', onClose);
     }
 
-    //요소 클릭
+    //영상 요소 클릭할 때, 이벤트 처리
     ctaVideo.addEventListener('click', function(e) { 
         ctaEmbedName = e.target.dataset.name;
         ctaEmbedTit = e.target.dataset.title;
         onCreateIframe();
     })
+    // end - 영상 영역
 
     //start - 해시태그 복사하기 
     const btnClip = document.querySelector('.btnClip');
