@@ -21,7 +21,11 @@
             swiperMobile.on('slideChange', function (swiper) {
                 const videoTit = document.querySelector('.promoWrap.mb .videoTit');
                 const imageIndex = swiper.activeIndex + 1;
-                videoTit.src = './public/images/mb_contents_1_tit_' + imageIndex + '.jpg';
+                if (imageIndex === 1){
+                    videoTit.src = '//images.samsung.com/kdp/editor/common/202305/3e499c9a-f5c2-4ea5-8808-4d8196d08739.jpg';
+                } else if(imageIndex === 2){
+                    videoTit.src = '//images.samsung.com/kdp/editor/common/202305/fc7a78aa-a973-4133-b27b-39a23dd0e7fe.jpg';
+                }
             });
         } else if (!isMobile && !swiperDesktopThumb && !swiperDesktop) {
             swiperDesktopThumb = new Swiper(".thumbsSwiper", {
@@ -41,7 +45,11 @@
             swiperDesktop.on('slideChange', function (swiper) {
                 const videoTit = document.querySelector('.promoWrap.pc .videoTit');
                 const imageIndex = swiper.activeIndex + 1;
-                videoTit.src = './public/images/pc_contents_1_tit_' + imageIndex + '.jpg';
+                if (imageIndex === 1){
+                    videoTit.src = '//images.samsung.com/kdp/editor/common/202305/c4ec54fb-88b3-40af-8f26-fa7693ae7724.jpg';
+                } else if(imageIndex === 2){
+                    videoTit.src = '//images.samsung.com/kdp/editor/common/202305/371ceec6-0e6d-4809-b114-eb2989c99659.jpg';
+                }
             });
         }
     }
