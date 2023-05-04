@@ -1,3 +1,4 @@
+
 (function(){
     //start - swiper
     let swiperDesktop;
@@ -16,11 +17,18 @@
                 loop: true,
                 spaceBetween: 20,
             });
+
+            swiperMobile.on('slideChange', function (swiper) {
+                const videoTit = document.querySelector('.promoWrap.mb .videoTit');
+                const imageIndex = swiper.activeIndex + 1;
+                videoTit.src = './public/images/mb_contents_1_tit_' + imageIndex + '.jpg';
+            });
         } else if (!isMobile && !swiperDesktopThumb && !swiperDesktop) {
             swiperDesktopThumb = new Swiper(".thumbsSwiper", {
                 slidesPerView: 4,
                 freeMode: true,
                 watchSlidesProgress: true,
+                
             });
             swiperDesktop = new Swiper(".mySwiper2", {
                 loop: true,
@@ -29,6 +37,11 @@
                 thumbs: {
                     swiper: swiperDesktopThumb,
                 },
+            });
+            swiperDesktop.on('slideChange', function (swiper) {
+                const videoTit = document.querySelector('.promoWrap.pc .videoTit');
+                const imageIndex = swiper.activeIndex + 1;
+                videoTit.src = './public/images/pc_contents_1_tit_' + imageIndex + '.jpg';
             });
         }
     }
