@@ -135,7 +135,7 @@ body.show .promoWrap.mb .popIframe .iframeArea .iframeWrap iframe { position: ab
 
 .promoWrap.mb section.keyVisual .btnMore { position: absolute; left: calc(130/720 * 100%); bottom: 31.95%; width: 64.44%; height: 5.4%; font-size: 0; line-height: 0; }
 
-.promoWrap.mb section.contVideo .swiperArea { width: 100%; margin: 0 auto; background: url(../images/mb_contents_1_2.jpg) no-repeat 0 0; background-size: 100% 100%; }
+.promoWrap.mb section.contVideo .swiperArea { width: 100%; margin: 0 auto; /* background: url(../images/mb_contents_1_2.jpg) no-repeat 0 0; */ background-size: 100% 100%; }
 
 .promoWrap.mb section.contVideo .swiper { width: 100%; height: 100%; margin: 0 auto; }
 
@@ -416,7 +416,11 @@ body.show .promoWrap.mb .popIframe .iframeArea .iframeWrap iframe { position: ab
             swiperMobile.on('slideChange', function (swiper) {
                 const videoTit = document.querySelector('.promoWrap.mb .videoTit');
                 const imageIndex = swiper.activeIndex + 1;
-                videoTit.src = './public/images/mb_contents_1_tit_' + imageIndex + '.jpg';
+                if (imageIndex === 1){
+                    videoTit.src = './public/images/mb_contents_1_tit_1.jpg';
+                } else if(imageIndex === 2){
+                    videoTit.src = './public/images/mb_contents_1_tit_2.jpg';
+                }
             });
         } else if (!isMobile && !swiperDesktopThumb && !swiperDesktop) {
             swiperDesktopThumb = new Swiper(".thumbsSwiper", {
@@ -436,7 +440,11 @@ body.show .promoWrap.mb .popIframe .iframeArea .iframeWrap iframe { position: ab
             swiperDesktop.on('slideChange', function (swiper) {
                 const videoTit = document.querySelector('.promoWrap.pc .videoTit');
                 const imageIndex = swiper.activeIndex + 1;
-                videoTit.src = './public/images/pc_contents_1_tit_' + imageIndex + '.jpg';
+                if (imageIndex === 1){
+                    videoTit.src = './public/images/pc_contents_1_tit_1.jpg';
+                } else if(imageIndex === 2){
+                    videoTit.src = './public/images/pc_contents_1_tit_2.jpg';
+                }
             });
         }
     }
